@@ -84,7 +84,6 @@ And create the skeleton packaging:
 	(docker)# cd /buildd/sources
 	(docker)# mkdir -p debian/source
 	(docker)# cp -v /usr/share/linux-packaging-snippets/kernel-info.mk.example debian/kernel-info.mk
-	(docker)# echo 13 > debian/compat
 	(docker)# echo "3.0 (native)" > debian/source/format
 	(docker)# cat > debian/rules <<EOF
 	#!/usr/bin/make -f
@@ -352,7 +351,6 @@ When you're happy with the kernel, be sure to commit your changes as well as the
 * debian/source/
 * debian/control
 * debian/rules
-* debian/compat
 * debian/kernel-info.mk
 
 ...and then push your `droidian` branch for others to enjoy.
